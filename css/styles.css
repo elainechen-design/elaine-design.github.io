@@ -190,7 +190,17 @@ footer{padding:50px 0}
 
 #contact-form{max-width:500px;margin:0 auto}
 
-#contact-form input,#contact-form textarea{display:block;width:100%;padding:10px;border-radius:4px;border:none;margin-bottom:10px;background:#1d6fa5;color:#fff;transition:.5s ease all}
+#contact-form input, #contact-form textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: none;
+    margin-bottom: 10px;
+    background: #787bdc;
+    color: #fff;
+    transition: .5s ease all
+}
 
 #contact-form input::-webkit-input-placeholder,#contact-form textarea::-webkit-input-placeholder{color:#fff}
 
