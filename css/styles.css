@@ -180,7 +180,11 @@ footer{padding:50px 0}
 
 #skills li{display:inline-block;margin:7px;padding:5px 10px;color:#374054;background:#e4e4ea;list-style:none;cursor:default;font-size:1.2em}
 
-#contact{padding:50px 15px;background:#3498db;text-align:center}
+#contact {
+    padding: 50px 15px;
+    background: rgb(68, 71, 171);
+    text-align: center
+}
 
 #contact h2{margin:0 0 15px 0;color:#fff;font-weight:500}
 
@@ -196,11 +200,25 @@ footer{padding:50px 0}
 
 #contact-form input:-ms-input-placeholder,#contact-form textarea:-ms-input-placeholder{color:#fff}
 
-#contact-form input:focus,#contact-form textarea:focus{outline:none;background:#16527a}
+#contact-form input:focus, #contact-form textarea:focus {
+    outline: none;
+    background: #6664cc
+}
 
 #contact-form textarea{height:150px;resize:none}
 
-#contact-form button{display:block;width:100%;background:#fff;border-radius:4px;padding:5px 10px;border:none;color:#3498db;font-weight:700;box-shadow:0 1px 3px rgba(0,0,0,0.12),0 1px 2px rgba(0,0,0,0.24);transition:.5s ease all}
+#contact-form button {
+    display: block;
+    width: 100%;
+    background: #fff;
+    border-radius: 4px;
+    padding: 5px 10px;
+    border: none;
+    color: #4447ab;
+    font-weight: 700;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12),0 1px 2px rgba(0,0,0,0.24);
+    transition: .5s ease all
+}
 
 #contact-form button:hover{box-shadow:0 10px 20px rgba(0,0,0,0.19),0 6px 6px rgba(0,0,0,0.23)}
 
