@@ -288,11 +288,27 @@ footer{padding:50px 0}
     
     #about p{text-align:left}}
 
-@media only screen and (max-width: 768px){header{position:fixed;display:none;z-index:999;animation:none;bottom:0;height:100%}
+@media only screen and (max-width: 768px) {
+    header {
+        position:fixed;
+        display:none;
+        z-index:999;
+        animation:none;
+        bottom:0;
+        height:100%
+    }
     
-    #mobile-menu-open,#mobile-menu-close{display:block}
+    #mobile-menu-open, #mobile-menu-close {
+        display:block
+    }
     
-    #menu{height:100%;overflow-y:auto;box-shadow:none;border-radius:0;width:100%}
+    #menu {
+        height:100%;
+        overflow-y:auto;
+        box-shadow:none;
+        border-radius:0;
+        width:100%
+    }
     
     #menu li{display:block;margin-bottom:10px}#lead-content h1{font-size:2em}
     
@@ -306,7 +322,19 @@ footer{padding:50px 0}
     
     .project-image{display:none}
     
-    .project-info{position:relative;margin:0;padding:30px 15px;top:auto;transform:none}
+    .project-info {
+        position:relative;
+        margin:0;
+        padding:30px 15px;
+        top:auto;
+        transform:none
+    }
+    
+    #mindless {
+        background-image: url(../images/mindless.jpg);
+        background-position: center;
+        background-size: cover;
+    }
     
     footer{text-align:center}.social{text-align:center}}
 
