@@ -345,7 +345,7 @@ footer{padding:50px 0}
     }
     
     #project-autour {
-        background-image: linear-gradient(to bottom, rgba(107, 93, 227, 0.7), rgba(76, 61, 209, 0.9)), url();
+        background-image: linear-gradient(to bottom, rgba(107, 93, 227, 0.7), rgba(76, 61, 209, 0.9)), url(/images/autour-mobile.jpg);
         background-position: center;
         background-size: cover;
     }
