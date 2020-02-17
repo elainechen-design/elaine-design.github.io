@@ -330,12 +330,22 @@ footer{padding:50px 0}
         transform:none
     }
     
-    .project-info h3, .project-info p, .project-info a {
+    .project-info h3, .project-info p {
         color: #FFFFFF;
+    }
+    
+    .project-info a {
+        color: #a0cfee;
     }
     
     #project-mindless {
         background-image: linear-gradient(to bottom, rgba(107, 93, 227, 0.7), rgba(76, 61, 209, 0.9)), url(/images/mindless.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+    
+    #project-autour {
+        background-image: linear-gradient(to bottom, rgba(107, 93, 227, 0.7), rgba(76, 61, 209, 0.9)), url();
         background-position: center;
         background-size: cover;
     }
