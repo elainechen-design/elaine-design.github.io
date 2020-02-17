@@ -174,9 +174,20 @@ footer{padding:50px 0}
 
 .project-image{float:left}
 
-.project-info{position:absolute;top:50%;transform:translateY(-50%);margin-left:300px;padding:15px}
+.project-info { 
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 300px;
+    padding: 60px;
+}
 
-.project-info h3{font-size:1.5em;font-weight:300;color:#374054;margin:0 0 15px 0}
+.project-info h3 {
+    font-size: 3em;
+    font-weight: 100;
+    color:#374054;
+    margin:0 0 15px 0
+}
 
 .project-info p{color:#74808a;margin:0 0 15px 0;font-size:0.9em}
 
