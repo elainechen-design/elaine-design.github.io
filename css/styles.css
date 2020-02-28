@@ -174,7 +174,7 @@ footer{padding:50px 0}
 
 .project-image{float:left}
 
-.project-info { 
+.project-info {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -208,8 +208,8 @@ footer{padding:50px 0}
 }
 
 #contact h2 {
-    margin:0 0 15px 0; 
-    color:#fff; 
+    margin:0 0 15px 0;
+    color:#fff;
     font-weight: 100;
     font-size: 2em;
 }
@@ -271,21 +271,21 @@ footer{padding:50px 0}
 .optional-section-block ul{padding:0 0 0 15px}
 
 @media only screen and (max-width: 750px){#experience-timeline:before,#experience-timeline:after{left:23px}
-    
+
     .vtimeline-date{width:auto;text-align:left;position:relative;margin-bottom:15px;display:block;margin-left:70px}
-    
+
     .vtimeline-icon{margin-left:0}.vtimeline-content{margin-left:70px}}
 
 @media only screen and (max-width: 992px){#lead{height:auto;min-height:auto;max-height:auto;padding:100px 15px}
-    
+
     #lead-content{position:relative;transform:none;left:auto;top:auto}
-    
+
     #lead-content h1{font-size:3em}
-    
+
     #lead-content h2{font-size:1.75em}
-    
+
     #about{text-align:center}
-    
+
     #about p{text-align:left}}
 
 @media only screen and (max-width: 768px) {
@@ -297,11 +297,11 @@ footer{padding:50px 0}
         bottom:0;
         height:100%
     }
-    
+
     #mobile-menu-open, #mobile-menu-close {
         display:block
     }
-    
+
     #menu {
         height:100%;
         overflow-y:auto;
@@ -309,19 +309,19 @@ footer{padding:50px 0}
         border-radius:0;
         width:100%
     }
-    
+
     #menu li{display:block;margin-bottom:10px}#lead-content h1{font-size:2em}
-    
+
     #lead-content h2{font-size:1.3em}
-    
+
     #lead-content a{padding:10px 20px}
-    
+
     #lead-down{display:none}
-    
+
     .education-block h3,.education-block span{float:none}
-    
+
     .project-image{display:none}
-    
+
     .project-info {
         position:relative;
         margin:0;
@@ -329,31 +329,37 @@ footer{padding:50px 0}
         top:auto;
         transform:none
     }
-    
+
     .project-info h3, .project-info p {
         color: #FFFFFF;
     }
-    
+
     .project-info a {
         color: #a0cfee;
     }
-    
+
     #project-mindless {
         background-image: linear-gradient(to bottom, rgba(107, 93, 227, 0.7), rgba(76, 61, 209, 0.9)), url(/images/mindless.jpg);
         background-position: center;
         background-size: cover;
     }
-    
+
     #project-autour {
         background-image: linear-gradient(to bottom, rgba(107, 93, 227, 0.7), rgba(76, 61, 209, 0.9)), url(/images/autour-mobile.jpg);
         background-position: center;
         background-size: cover;
     }
-    
+
+    #project-edms {
+        background-image: linear-gradient(to bottom, rgba(107, 93, 227, 0.7), rgba(76, 61, 209, 0.9)), url(/images/mwave-mobile.png);
+        background-position: center;
+        background-size: cover;
+    }
+
     footer{text-align:center}.social{text-align:center}}
 
 @media only screen and (max-width: 480px){#lead-content h1{font-size:1.5em}
-    
+
     #lead-content h2{font-size:1em}
-    
+
     #lead-content a{font-size:0.9em;padding:5px 10px}}
