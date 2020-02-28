@@ -195,7 +195,7 @@ footer{padding:50px 0}
     margin:0 0 15px 0
 }
 
-.project-info h3:after {
+/* .project-info h3:after {
     position: absolute;
     content: '';
     top: 42%;
@@ -205,7 +205,7 @@ footer{padding:50px 0}
     right: 0;
     margin: 0 auto;
     background: rgb(76, 61, 209);
-}
+} */
 
 .project-info p{color:#74808a;margin:0 0 15px 0;font-size:0.9em}
 
