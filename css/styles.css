@@ -166,9 +166,15 @@ footer{padding:50px 0}
 
 .education-block ul{padding:0 0 0 15px}
 
-#projects{padding:50px 15px;border-bottom:1px solid #dcd9d9;text-align:center}
+#projects {
+  padding: 50px 15px;
+  border-bottom: 1px solid #dcd9d9;
+  text-align: center;
+}
 
-#projects h2{color:#374054;margin-bottom:50px}
+#projects h2 { color: #374054;
+  margin-bottom: 50px
+}
 
 .project{position:relative;max-width:900px;margin:0 auto 30px auto;overflow:hidden;background:#fff;border-radius:4px}
 
@@ -183,17 +189,35 @@ footer{padding:50px 0}
 }
 
 .project-info h3 {
-    font-size: 3em;
+    font-size: 2em;
     font-weight: 100;
-    color:#374054;
+    color: #374054;
     margin:0 0 15px 0
+}
+
+.project-info h3:after {
+    position: absolute;
+    content: '';
+    top: 42%;
+    height: 1px;
+    width: 50px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background: rgb(76, 61, 209);
 }
 
 .project-info p{color:#74808a;margin:0 0 15px 0;font-size:0.9em}
 
 .no-image .project-info{position:relative;margin:0;padding:30px 15px;transform:none}
 
-#more-projects{display:none}#skills{padding:50px 15px;text-align:center}
+#more-projects {
+  display: none
+  }
+  #skills {
+    padding: 50px 15px;
+    text-align: center
+  }
 
 #skills h2{color:#374054;margin-bottom:50px}
 
@@ -338,20 +362,36 @@ footer{padding:50px 0}
         color: #a0cfee;
     }
 
+    .project-links {
+      color: white;
+    }
+
     #project-mindless {
-        background-image: linear-gradient(to bottom, rgba(107, 93, 227, 0.7), rgba(76, 61, 209, 0.9)), url(/images/mindless.jpg);
+        background-image: linear-gradient(to bottom, rgba(107, 93, 227, 0.7), rgba(76, 61, 209, 0.9)), url(../images/mindless.jpg);
         background-position: center;
         background-size: cover;
     }
 
     #project-autour {
-        background-image: linear-gradient(to bottom, rgba(107, 93, 227, 0.7), rgba(76, 61, 209, 0.9)), url(/images/autour-mobile.jpg);
+        background-image: linear-gradient(to bottom, rgba(107, 93, 227, 0.7), rgba(76, 61, 209, 0.9)), url(../images/autour-mobile.jpg);
         background-position: center;
         background-size: cover;
     }
 
     #project-edms {
-        background-image: linear-gradient(to bottom, rgba(107, 93, 227, 0.7), rgba(76, 61, 209, 0.9)), url(/images/mwave-mobile.png);
+        background-image: linear-gradient(to bottom, rgba(107, 93, 227, 0.7), rgba(76, 61, 209, 0.9)), url(../images/mwave-mobile.png);
+        background-position: center;
+        background-size: cover;
+    }
+
+    #project-landing-pages {
+        background-image: linear-gradient(to bottom, rgba(107, 93, 227, 0.7), rgba(76, 61, 209, 0.9)), url(../images/landing-pages-mobile.png);
+        background-position: center;
+        background-size: cover;
+    }
+
+    #project-animations {
+        background-image: linear-gradient(to bottom, rgba(107, 93, 227, 0.7), rgba(76, 61, 209, 0.9)), url(../images/animations-mobile.png);
         background-position: center;
         background-size: cover;
     }
