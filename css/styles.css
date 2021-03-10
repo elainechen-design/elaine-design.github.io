@@ -383,6 +383,18 @@ footer{padding:50px 0}
         background-position: center;
         background-size: cover;
     }
+    
+    #project-wp-edms {
+        background-image: linear-gradient(to bottom, rgba(107, 93, 227, 0.7), rgba(76, 61, 209, 0.9)), url(../images/WP-edm-mobile.png);
+        background-position: center;
+        background-size: cover;
+    }
+    
+    #project-wp-LPs {
+        background-image: linear-gradient(to bottom, rgba(107, 93, 227, 0.7), rgba(76, 61, 209, 0.9)), url(../images/WP-LPs-mobile.png);
+        background-position: center;
+        background-size: cover;
+    }
 
     #project-landing-pages {
         background-image: linear-gradient(to bottom, rgba(107, 93, 227, 0.7), rgba(76, 61, 209, 0.9)), url(../images/landing-pages-mobile.png);
