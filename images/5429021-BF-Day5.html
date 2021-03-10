@@ -1,0 +1,476 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title></title>
+		<style type="text/css">
+			/* RESET STYLES */
+			p {margin:1em 0; color: #FFFFFF!important;}
+			table {border-collapse:collapse; table-layout:fixed;}
+			img, a img {border:0; height:auto; outline:none; text-decoration:none;}
+			h1, h2, h3, h4, h5, h6 {display:block !important; margin:0 !important; padding:0 !important;}
+			h3 {color: #FFFFFF!important;}
+			li {color: #FFFFFF!important;}
+			html, body {height:100% !important; margin:0 !important; padding:0 !important; width:100% !important;}
+			#bodyTable, #bodyCell {height:100% !important; margin:0; padding:0; width:640 !important;}
+			h1 {font-size: 24px !important; line-height: 32px !important; color: #E11931; font-weight: bold;}
+			h2 {font-size: 21px !important; line-height: 28px !important; color: #E11931; font-weight: bold;}
+			h3 {font-size: 18px !important; line-height: 24px !important; font-weight: bold;}
+
+			/* CLIENT-SPECIFIC STYLES */
+			#outlook a{padding:0;} /* Force Outlook 2007 and up to provide a "view in browser" message. */
+			table{mso-table-lspace:0pt; mso-table-rspace:0pt;} /* Remove spacing between tables in Outlook 2007 and up. */
+			.ReadMsgBody{width:100%;} .ExternalClass{width:100%;} /* Force Outlook.com to display emails at full width. */
+			p, a, li, td, blockquote{mso-line-height-rule:exactly;} /* Force Outlook to render line heights as they're originally set. */
+			a[href^="tel"], a[href^="sms"]{color:inherit; cursor:default; text-decoration:none;} /* Force mobile devices to inherit declared link styles. */
+			p, a, li, td, body, table, blockquote{-ms-text-size-adjust:100%; -webkit-text-size-adjust:100%;} /* Prevent Windows- and Webkit-based mobile platforms from changing declared text sizes. */
+			.ExternalClass, .ExternalClass p, .ExternalClass td, .ExternalClass div, .ExternalClass span, .ExternalClass font{line-height:100%;} /* Force Outlook.com to display line heights normally. */
+
+			/* STRUCTURAL STYLES */
+			.emailContainer{max-width:640px;}
+			.flexibleColumn{max-width:320px;}
+			.flexibleGrid{max-width:213px;}
+
+			/* CONTENT STYLES */
+			body {background-color:#111111;}
+			img {border-radius:0;}
+			a {text-decoration:none;}
+			#preheader {background-color:#333333; padding-top:10px; padding-bottom:10px; color:#000000; font-family: Helvetica, Arial, sans-serif; font-size:9px; line-height:12px; text-align:left;}
+			#logoContent, #logo, #logo a {color:#000000 !important; font-family: Helvetica, Arial, sans-serif; font-size:12px; text-align:center; text-decoration:none;}
+			.tastingNote {height:60px !important;}
+			.tastingNote-mob {line-height: 0px !important;}
+			.fullWidth, .fullWidth img {width:100% !important;}
+			.button {background-color:#E11931; border-radius:4px;}
+			.buttonContent {padding-top:16px; padding-right:25px; padding-bottom:16px; padding-left:25px; text-align:center;}
+			.buttonContent, .buttonContent a {color:#111111; display:block; font-family: Helvetica, Arial, sans-serif; font-size:16px; line-height:18px; text-align:center; text-decoration:none;}
+			.bodyCell {padding:10px 30px !important;}
+			.savings {color: #E11931; font-size: 20px; line-height: 28px;}
+			.headerButtonContainer{padding:20px 0px;}
+			.headerButton{background-color:#E11931; border-radius:3px;}
+			.headerButtonContent{padding-top:8px; padding-right:20px; padding-bottom:8px; padding-left:20px; text-align:center;}
+			.headerButtonContent, .headerButtonContent a{color:#111111; display:block; font-family: Helvetica, Arial, sans-serif; font-size:16px; line-height:18px; text-align:center; text-decoration:none;}
+			.TandCs a {color: #5A5A5A; text-decoration: underline;}
+
+			/* MOBILE STYLES */
+			@media screen and (max-width:640px){
+				
+				/* STRUCTURAL STYLES */
+				*[class="gmail-fix"] { display: none !important;}
+				#bodyTable, #bodyCell{ margin:0; padding:0; width:100%;}
+				.flexibleColumn{max-width:50% !important;}
+				.flexibleColumn img {width:100%;}
+				.flexibleGrid{max-width:33% !important; padding:20px;}
+
+				/* CONTENT STYLES */
+				#previewContent, #logoContent, #logo{text-align:center !important;  width:100%;}
+				.socialContent{display:none !important;}
+				.mobHide, .mobHide img {width: 0!important; max-height: 0 !important; overflow: hidden !important; display: none !important;}
+				.mobShow{max-height:100% !important; width: 100% !important; height: auto!important;display:table-cell !important;}
+				.mobShow img{width:100% !important; height: auto !important; padding: 20px 0px;}
+				.noteText-mob{padding:0px 10px 0px 3px !important; width:30% !important; height:auto !important; font-size:12pt !important;}
+				.tastingNote-mob, .tastingNote-mob img{width:auto !important; height:auto !important; padding:0 !important; display:table-cell !important; line-height: 20px !important;}
+				.noteImg-mob{width:10% !important; height: auto !important;}
+				.noteImg-mob img{width:80% !important; height: auto !important;}
+				.noteCol {width:50% !important; height: auto !important;}
+				.respBtl {padding: 10px 10px 0px;}
+				.CenterHeader img {width: 160px !important;}
+			}
+
+			@media only screen and (max-width:480px){
+				/* CLIENT-SPECIFIC STYLES */
+				body{width:100% !important; min-width:100% !important;} /* Force iOS Mail to render the email at full width. */
+
+				/* STRUCTURAL STYLES */
+				.flexibleColumn {max-width:100% !important; width:100% !important;}
+				.flexibleGrid {max-width:100% !important; width:100% !important;}
+				.flexibleGrid img {width:90% !important;}
+				.flexibleColumn img {width: 100% !important;}
+
+				/* CONTENT STYLES */
+				#emailPreview, #socialContent{display:none !important; visibility:hidden !important;}
+				.headerButton{width:70% !important;}
+				.headerButtonContent{font-size:24px !important; padding:0 !important;}
+				.headerButtonContent a{padding:20px !important;}
+				.emailContainer{max-width:100% !important;}
+				.bodyCell {padding: 10px 20px !important;}
+				.guaranteeImg {width: 100% !important;}
+				.mobShow img {width:100% !important; height: auto !important;}
+				.tastingNote-mob, .tastingNote-mob img {width:85% !important;}
+				.noteText-mob{font-size:12px !important; line-height: 16px !important;}
+				.noteImg-mob{width:20% !important; height: auto !important;}
+				.noteImg-mob img{width:80% !important; height: auto !important;}
+				.CenterHeader {text-align: center !important}
+				.CenterHeader img {width: 160px !important;}
+				.removePadding {padding: 0 20px 0 !important;}
+			}
+        </style>
+	</head>
+<body width="100%" style="margin: 0; padding: 0 !important; mso-line-height-rule: exactly; background-color: #111111;" bgcolor="#111111">    
+	<center>
+		<!--[if (gte mso 9)|(IE)]>
+			<table bgcolor="#111111" cellpadding="0" cellspacing="0" width="100%" style="background-color: #111111;" align="center"><tr><td>
+		<![endif]-->
+		<table align="center" border="0" cellpadding="0" cellspacing="0" height="100%" width="640" id="bodyTable">
+
+      		<!-- ******************************** HEADER START ******************************** -->
+			<tr>
+    			<td align="center" valign="top" id="emailPreheader" style="background-color:#222222; padding-top:10px; padding-bottom:10px;">
+					<!-- *** PRE-HEADER TEXT *** -->
+					<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" id="emailPreview">
+						<tr>
+							<td align="center" valign="top" id="previewContent" style="color:#aeaeae; font-family: Helvetica, Arial, sans-serif; font-size:9px; text-align:center; padding: 10px 10px 0;">SAVE BIG on delicious drops in our Black Friday frenzy</td>
+						</tr>
+					</table>
+					<!-- *** END PRE-HEADER TEXT *** -->
+				</td>
+			</tr>
+			<tr>
+				<td align="left" valign="top" style="background-color:#222222;">
+					<!--[if (gte mso 9)|(IE)]>
+					<table align="center" border="0" cellspacing="0" cellpadding="0" width="640"><tr><td align="center" valign="top" width="320">
+					<![endif]-->
+					<table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" class="flexibleColumn">
+						<tr>
+							<td align="left" valign="top">
+								<table border="0" cellspacing="0" cellpadding="0" width="100%">
+									<tr>
+										<td align="left" valign="top" style="padding: 0 20px 20px;" class="CenterHeader removePadding">
+											<a href="https://www.virginwines.com.au/jsp/offer/common/offer.jsp?name=5429-bf-cust-favs&promoCode=5429021&utm_source=virginwines&utm_medium=email&utm_campaign=5429021&utm_content=edm_bf_cust_favs" target="_blank">
+												<img src="https://hosting-source.bm23.com/25710/public/TEMPLATE/VirginWines-Logo-White.png" width="160" height="100%" alt="Virgin Wines" style="border-style:none"/>
+											</a>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+					<!--[if (gte mso 9)|(IE)]>
+					</td><td align="center" valign="top" width="320">
+					<![endif]-->
+					<table align="right" border="0" cellpadding="0" cellspacing="0" width="100%" class="flexibleColumn">
+						<tr>
+							<td align="center" valign="top">
+								<table border="0" cellspacing="0" cellpadding="0" width="100%">
+									<tr>
+										<td align="center" valign="top" style="padding: 20px 25px 0">
+											<p style="font-size:20px; color:#aeaeae; font-family: Helvetica, Arial, sans-serif; text-align: right; margin: 0" class="CenterHeader">Call us <strong><a href="tel:1300 681 669" style="color:#FFFFFF;">1300 681 669</a></strong><br />
+									  		<span style="font-size: 14px; line-height: 20px;">Quote <strong style="color: #FFFFFF;">5429021</strong> for this offer</span><br />
+											<p style="font-size: 12px; font-family: Helvetica, Arial, sans-serif; text-align: right;" class="CenterHeader"><a href="%%!message_url%%" style="color:#aeaeae; text-decoration:none;">Trouble reading this email? Click Here</a></p>
+											</p>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+					<!--[if (gte mso 9)|(IE)]>
+					</td></tr></table>
+					<![endif]-->
+				</td>
+			</tr>
+        	<!-- ******************************** HEADER END ******************************** -->
+
+			<!-- ******************************** MAIN SECTION START ******************************** -->
+			<tr>
+				<td align="center" valign="top" id="emailHeader" style="background-color:#111111; padding-top:0px; padding-bottom:0px;">
+					<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" class="emailContainer" style="">
+						
+						<!-- *** HEADER IMAGE *** -->
+						<tr>
+							<td align="center" valign="top">
+								<a href="https://www.virginwines.com.au/jsp/offer/common/offer.jsp?name=5429-bf-cust-favs&promoCode=5429021&utm_source=virginwines&utm_medium=email&utm_campaign=5429021&utm_content=edm_bf_cust_favs" target="_blank">
+									<img src="https://hosting-source.bm23.com/25710/public/November-2020/5429021-BF-Day5-Hero.jpg" width="640" alt="Customer Favourites" style="color:#E11931; font-family: Helvetica, Arial, sans-serif; font-size:22px; text-align:center; border-style:none; display: block;" class="fullWidth" />
+								</a>
+							</td>
+						</tr>
+						<!-- *** END HEADER IMAGE *** -->
+						
+						<!-- *** BODY TEXT *** -->
+                        <tr>
+							<td width="100%" align="left" valign="top" style="color:#FFFFFF; font-family: Helvetica, Arial, sans-serif; font-size:16px; line-height:24px; text-align:left; background-color: #111111; padding: 10px 30px;" class="bodyCell">
+								<p>Hi wine enthusiast,</p>
+							  	<p>Don&rsquo;t panic, but today is your last day to secure one of our amazing Black Friday frenzy deals. And, to salute the sales in style, we&rsquo;ve got a great deal on offer today! Grab a dozen of our sensational Customer Favourites, AND <strong>you&rsquo;ll get a bottle of Langhorne Creek Shiraz + 2 Dartington Crystal Stemless Glasses FREE with your order. </strong>Plus <strong>FREE SHIPPING!</strong></p>
+                                <p>How&rsquo;s that for a deal??</p>
+                                <p>Enjoy these bestselling drops: the ever-popular <strong>Gold-medal Black Pig Shiraz</strong>, the silky-smooth <strong>Double Gold-winning Eden Grove Shiraz</strong>, a magical <strong>TRIPLE Gold-winning Cabernet Sauvignon</strong> from <em>&ldquo;magician&rdquo;</em> (Halliday) John Quarisa, and the <strong>irresistibly dark and creamy Dark Corner Durif</strong>. Finish with a Golden duo from Sam &lsquo;Mr Medals&rsquo; Trimboli: his <strong>complex, beautifully mature Black Duck Durif</strong> and the <strong>elegant Salvatore blend</strong>, both shining with Gold. </p>
+                                <p>And don&rsquo;t forget your FREE Riverbank Langhorne Creek Shiraz &amp; 2 FREE stemless glasses. Throw in the FREE SHIPPING and you&rsquo;re onto a serious winner!</p>
+								
+								<p style="text-align: center;">12 bottles <s>$236</s><strong> NOW $155.85</strong><br />
+									<strong class="savings">+ FREE Shiraz & Glasses Worth $62
+									<br />& FREE SHIPPING</strong></p>
+						  </td>
+						</tr>
+						<!-- *** END BODY TEXT *** -->
+						
+						<!-- *** SHOP NOW BUTTON *** -->
+						<tr>
+							<td align="center" valign="top" width="100%" style="padding: 0 0 30px; color:#202020; font-family: Helvetica, Arial, sans-serif; font-size:18px; line-height:22px; text-align:center;">
+								<table align="center" border="0" cellpadding="0" cellspacing="0" class="headerButton" style="background-color:#E11931;">
+									<tr>
+										<td align="center" valign="middle" class="headerButtonContent" style="padding: 15px 20px; text-align:center; font-family: Helvetica, Arial, sans-serif; font-size:16px; line-height:18px; text-align:center; text-decoration:none; border-radius:3px;">
+											<a href="https://www.virginwines.com.au/jsp/offer/common/offer.jsp?name=5429-bf-cust-favs&promoCode=5429021&utm_source=virginwines&utm_medium=email&utm_campaign=5429021&utm_content=edm_bf_cust_favs" target="_blank" style="text-decoration:none; color:#FFFFFF"><strong>SHOP NOW</strong></a>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<!-- *** END SHOP NOW BUTTON *** -->
+						
+						<!-- *** FULL WIDTH ADDON/CASE *** -->	
+                        <tr>
+							<td width="100%" align="center" valign="top" style="border-top: 1px solid #262626; color:#FFFFFF; font-family: Helvetica, Arial, sans-serif; font-size:16px; padding:30px 30px 20px; text-align:center; background-color: #111111">
+							  	<h2>Go big or go home – JUMBO REDS!</h2>
+							</td>
+						</tr>
+			
+						<!-- *** FULL WIDTH IMAGE *** -->
+						<tr>
+							<td align="center" valign="top" width="100%" style="padding: 0px 0 0; background-color: #111111">
+								<a href="https://www.virginwines.com.au/jsp/offer/common/offer.jsp?name=5429-bf-cust-favs&promoCode=5429021&utm_source=virginwines&utm_medium=email&utm_campaign=5429021&utm_content=edm_bf_cust_favs" target="_blank">
+									<img src="https://hosting-source.bm23.com/25710/public/November-2020/5429021-BF-Day5-Jumbo.jpg" alt="HUMBO Reds" width="640" style="border-style:none; display: block;" class="fullWidth" />
+								</a>
+							</td>
+						</tr>
+						<!-- *** END FULL WIDTH IMAGE *** -->
+				
+						<tr>
+							<td align="left" valign="top" width="100%" style="color:#FFFFFF; font-family: Helvetica, Arial, sans-serif; font-size:16px; line-height:24px; text-align:left; background-color: #111111" class="bodyCell">
+								<p>Dive into 15 delicious Aussie reds from our premier wine regions – there&rsquo;s: </p>
+                                <ul>
+                                  <li><strong>A Gold-medal Cabernet </strong>from John Quarisa that boasts mile upon mile of excellent fruit flavour </li>
+                                  <li><strong>A marvellously silky Manjimup Merlot </strong>from 4 Black Star Peos Estate with 92pts from Wine Orbit </li>
+                                  <li>The <strong>BIG, bolshy McPherson XV Pure</strong> – a luscious Cabernet-rich red from 5 Black Star McPherson&rsquo;s… and more!</li>
+                                </ul>
+                                <p style="text-align: center;">15 bottles <s>$303 </s><strong> NOW $164.85</strong><br />
+									<strong class="savings">SAVE $138<br />+ FREE SHIPPING</strong></p>
+							</td>
+						</tr>
+						<!-- *** END FULL WIDTH ADDON/CASE *** -->
+						
+						<!-- *** SHOP NOW BUTTON *** -->
+						<tr>
+							<td align="center" valign="top" width="100%" style="padding: 0 0 30px; color:#202020; font-family: Helvetica, Arial, sans-serif; font-size:18px; line-height:22px; text-align:center;">
+								<table align="center" border="0" cellpadding="0" cellspacing="0" class="headerButton" style="background-color:#E11931;">
+									<tr>
+										<td align="center" valign="middle" class="headerButtonContent" style="padding: 15px 20px; text-align:center; font-family: Helvetica, Arial, sans-serif; font-size:16px; line-height:18px; text-align:center; text-decoration:none; border-radius:3px;">
+											<a href="https://www.virginwines.com.au/jsp/offer/common/offer.jsp?name=5429-bf-cust-favs&promoCode=5429021&utm_source=virginwines&utm_medium=email&utm_campaign=5429021&utm_content=edm_bf_cust_favs" target="_blank" style="text-decoration:none; color:#FFFFFF"><strong>SHOP NOW</strong></a>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<!-- *** END SHOP NOW BUTTON *** -->
+						
+						<!-- *** FULL WIDTH ADDON/CASE *** -->	
+                        <tr>
+							<td width="100%" align="center" valign="top" style="border-top: 1px solid #262626; color:#FFFFFF; font-family: Helvetica, Arial, sans-serif; font-size:16px; padding:30px 30px 20px; text-align:center; background-color: #111111">
+							  	<h2>Want even MORE value for money?</h2>
+							</td>
+						</tr>
+			
+						<!-- *** FULL WIDTH IMAGE *** -->
+						<tr>
+							<td align="center" valign="top" width="100%" style="padding: 0px 0 0; background-color: #111111">
+								<a href="https://www.virginwines.com.au/jsp/offer/common/offer.jsp?name=5429-bf-cust-favs&promoCode=5429021&utm_source=virginwines&utm_medium=email&utm_campaign=5429021&utm_content=edm_bf_cust_favs" target="_blank">
+									<img src="https://hosting-source.bm23.com/25710/public/November-2020/5429021-BF-Day5-Bulk.jpg" alt="BULK Up & SAVE More" width="640" style="border-style:none; display: block;" class="fullWidth" />
+								</a>
+							</td>
+						</tr>
+						<!-- *** END FULL WIDTH IMAGE *** -->
+				
+						<tr>
+							<td align="left" valign="top" width="100%" style="color:#FFFFFF; font-family: Helvetica, Arial, sans-serif; font-size:16px; line-height:24px; text-align:left; background-color: #111111" class="bodyCell">
+								<p>If you want to save EVEN MORE and get ANOTHER FREE BOTTLE, grab our epic bulk deal! It combines our <strong>Customer Faves</strong> &amp; <strong>Jumbo Reds</strong> deal – <strong>plus you&rsquo;ll get the 2 FREE glasses, the FREE Langhorne Creek Shiraz AND a Gold-medal Shiraz from 5 Black Star Allegiance Wines.</strong> Yep, you read that right. That&rsquo;s 29 bottles of wine and 2 stemless glasses for $320.73! You save a massive $218!</p>
+						  		<p style="text-align: center;">27 bottles <s>$539</s><strong> NOW $320.73</strong><br />
+							  <strong class="savings">SAVE $218
+								<br />+ 2 FREE Shiraz & Glasses Worth $92
+								<br />& FREE SHIPPING
+									</strong></p>
+						  </td>
+						</tr>
+						<!-- *** END FULL WIDTH ADDON/CASE *** -->
+						
+						<!-- *** SHOP NOW BUTTON *** -->
+						<tr>
+							<td align="center" valign="top" width="100%" style="padding: 0 0 30px; color:#202020; font-family: Helvetica, Arial, sans-serif; font-size:18px; line-height:22px; text-align:center;">
+								<table align="center" border="0" cellpadding="0" cellspacing="0" class="headerButton" style="background-color:#E11931;">
+									<tr>
+										<td align="center" valign="middle" class="headerButtonContent" style="padding: 15px 20px; text-align:center; font-family: Helvetica, Arial, sans-serif; font-size:16px; line-height:18px; text-align:center; text-decoration:none; border-radius:3px;">
+											<a href="https://www.virginwines.com.au/jsp/offer/common/offer.jsp?name=5429-bf-cust-favs&promoCode=5429021&utm_source=virginwines&utm_medium=email&utm_campaign=5429021&utm_content=edm_bf_cust_favs" target="_blank" style="text-decoration:none; color:#FFFFFF"><strong>SHOP NOW</strong></a>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<!-- *** END SHOP NOW BUTTON *** -->
+						
+						<!-- *** BOTTOM TEXT *** -->
+						<tr>
+							<td width="100%" align="center" valign="top" style="border-top: 1px solid #262626; color:#FFFFFF; font-family: Helvetica, Arial, sans-serif; font-size:16px; line-height:24px; text-align:center; background-color: #111111; padding: 10px 30px;" class="bodyCell">
+		  					  	<p style="font-size: 18px; line-height: 26px; color: #E11931;"><strong>Drink well, drink wisely, stay safe.</strong></p>
+		  						<p>Today&rsquo;s the last day for a Black Friday bargain – don&rsquo;t miss out! <strong>Grab one (or both!) of these epic offers now. </strong><strong></strong></p>
+		  					  	<p style="font-size: 18px; line-height: 26px;"><strong><a href="https://www.virginwines.com.au/jsp/offer/common/offer.jsp?name=5429-bf-cust-favs&promoCode=5429021&utm_source=virginwines&utm_medium=email&utm_campaign=5429021&utm_content=edm_bf_cust_favs" style="color:#E11931;" target="_blank">Click&nbsp;here</a> to order or call <a href="tel:1300 681 669" style="color: #E11931">1300&nbsp;681&nbsp;669 </a> quoting 5429021 NOW.</strong></p>
+                      		</td>
+			  			</tr>
+						<!-- *** END BOTTOM TEXT *** -->
+						
+					</table>
+				</td>
+			</tr>
+			<!-- ******************************** MAIN SECTION END ******************************** -->
+
+			<!-- ******************************** PROMO SECTION START ******************************** -->
+	
+            <!-- *** VELOCITY *** -->
+            <tr>
+              <td width="100%" align="left" valign="top" style="border-top: 1px solid #262626; color:#FFFFFF; font-family: Helvetica, Arial, sans-serif; font-size:16px; line-height:24px; text-align:left; background-color: #111111; padding: 30px;" class="bodyCell">
+                    <p><img src="http://hosting-source.bm23.com/25710/public/Velocity-logo.png" width="110" height="66" alt="" align="right" style="margin-left: 10px" /><em>Don't forget you receive <strong>2 Velocity Points</strong> for every dollar spent with Virgin Wines. Just enter your Velocity Number when you purchase</em>.</p>
+                </td>
+            </tr>
+            <!-- *** END VELOCITY *** -->
+	
+			<tr>
+				<td align="center" valign="top" style="background-color:#262626; padding-top:20px; padding-bottom:0px;">
+					<!--[if (gte mso 9)|(IE)]>
+					<table align="center" border="0" cellpadding="10" cellspacing="0" width="640"><tr><td align="center" valign="top">
+					<![endif]-->
+					<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+						<tr>
+							<td align="center" valign="top" class="gridContent" style="color:#AEAEAE; font-family:Helvetica, Arial, sans-serif; font-size:16px; line-height:24px; text-align:center;">
+								<h1 style="color: #8E8E8E">Looking for more?</h1>
+							</td>
+						</tr>
+					</table>
+					<!--[if (gte mso 9)|(IE)]>
+ 					</td></tr></table>
+					<![endif]-->
+				</td>
+			</tr>
+			<tr>
+				<td align="center" valign="top" id="bodyCell">
+					<table align="center" border="0" cellspacing="0" cellpadding="0" width="100%">						
+						<tr>
+							<td align="center" valign="top" class="gridContent" style="background-color:#262626; padding-bottom:0px;">
+
+							<!-- *** UNLIMITED TILE *** -->
+
+								<!--[if (gte mso 9)|(IE)]>
+								<table align="left" border="0" cellspacing="0" cellpadding="5" width="320">
+								<tr>
+								<td align="center" valign="top" width="300">
+								<![endif]-->
+
+								<table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" class="flexibleColumn">
+									<tr>
+										<td align="center" valign="top" style="padding: 20px 20px 0">
+													<a href="https://www.virginwines.com.au/jsp/offer/common/offer.jsp?name=pwa-vw&promoCode=5429021&utm_source=virginwines&utm_medium=email&utm_campaign=5429021&utm_content=edm_bf_cust_favs" target="_blank">
+														<img src="https://hosting-source.bm23.com/25710/public/TEMPLATE/VW-PWA-Tile.jpg" width="280" alt="Personal Wine Advisors" style="border-style:none; display: block;" />
+													</a>
+										</td>
+									</tr>
+								</table>
+								
+	             				<!--[if (gte mso 9)|(IE)]>
+	         					</td>
+								<![endif]-->
+
+							<!-- *** END UNLIMITED TILE *** -->
+
+							<!-- *** NEW ARRIVALS TILE *** -->
+								
+								<!--[if (gte mso 9)|(IE)]>
+								<td align="center" valign="top" width="300">
+								<![endif]-->
+
+								<table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" class="flexibleColumn">
+									<tr>
+										<td align="center" valign="top" style="padding: 20px 20px 0">
+											<a href="https://www.virginwines.com.au/jsp/offer/common/offer.jsp?name=new-arrivals&promoCode=5429021&utm_source=virginwines&utm_medium=email&utm_campaign=5429021&utm_content=edm_bf_cust_favs" target="_blank">
+												<img src="https://hosting-source.bm23.com/25710/public/TEMPLATE/VW-NewArrivals-Tile.jpg" alt="NEW ARRIVALS" width="280" style="border-style:none; display: block;" />
+											</a>
+										</td>
+									</tr>
+								</table>
+								
+	             				<!--[if (gte mso 9)|(IE)]>
+	         					</td>
+	         					</tr>
+	         					</table>
+								<![endif]-->
+								
+							<!-- *** END NEW ARRIVALS TILE *** -->
+
+							</td>
+						</tr>
+						
+						<!-- *** GUARANTEE BANNER *** -->
+						<tr>
+							<td align="center" valign="top" style="background-color:#262626; padding: 10px 0 0">
+								<a href="https://www.virginwines.com.au/customer-services#/existing-orders/what-is-your-100-guarantee" target="_blank">
+									<img src="https://hosting-source.bm23.com/25710/public/Footer/VW-SatisfactionGuarantee-Banner-dark.jpg" alt="100% MONEY-BACK GUARANTEE" width="480" class="guaranteeImg" />
+								</a>
+							</td>
+						</tr>
+						<!-- *** END GUARANTEE BANNER *** -->
+
+						<!-- *** SOCIALS *** -->
+						<tr>
+							<td align="center" style="background-color:#262626; padding-bottom: 25px">
+								<table align="center" border="0" cellpadding="0" cellspacing="0" width="110">
+									<tr>
+										<td align="center">
+											<a href="https://www.facebook.com/VirginWinesAUS/" target="_blank"><img src="https://hosting-source.bm23.com/25710/public/TEMPLATE/VW-Social-Icon-Facebook.png" width="45" alt="Facebook" /></a>
+										</td>
+										<td align="center">
+											<a href="https://www.instagram.com/virginwinesaus/" target="_blank"><img src="https://hosting-source.bm23.com/25710/public/TEMPLATE/VW-Social-Icon-Insta.png" width="45" alt="Instagram" /></a>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<!-- *** END SOCIALS *** -->
+
+					</table>
+				</td>
+			</tr>
+			<!-- ******************************** PROMO SECTION END ******************************** -->
+
+			<!-- ******************************** T&Cs START ******************************** -->
+			<tr>
+				<td align="center" valign="top" id="emailFooter" style="background-color:#000000;">
+					<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" class="emailContainer">
+						<tr>
+							<td align="center" valign="top">
+							<!--[if (gte mso 9)|(IE)]>
+							<table align="center" border="0" cellspacing="0" cellpadding="0" width="640">
+							<tr>
+							<td align="center" valign="top">
+							<![endif]-->
+							<table border="0" cellpadding="0" cellspacing="0" width="100%">
+								<!-- *** T&C *** -->
+								<tr>
+                                <td align="left" style="padding: 10px 20px; font-family: sans-serif; font-size: 11px; line-height: 16px; color: #FFFFFF;" class="TandCs">
+									<p><a href="%%!forward_url%%" style="color: #FFFFFF; text-decoration: underline;">Forward to a friend</a> <!-- | <a href="%%!manage_url%%">Manage Email Preferences</a> --> | <a href="%%!unsubscribe_url%%" style="color: #FFFFFF; text-decoration: underline;">Unsubscribe</a> | <a href="%%!message_url%%" style="color:#FFFFFF; text-decoration:underline;">View this email in your browser</a></p>
+                                </td>
+							  </tr>
+							</table>
+							<!--[if (gte mso 9)|(IE)]>
+							</td>
+							</tr>
+							</table>
+							<![endif]-->
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<!-- ******************************** T&Cs END ******************************** -->
+
+		</table>
+		<!--[if (gte mso 9)|(IE)]>
+			</td></tr></table>
+		<![endif]-->
+	</center>
+  </body>
+</html>
